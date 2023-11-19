@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { OrganizadorService } from 'src/app/Organizador/organizador.service';
-import { Organizador } from 'src/app/Organizador/Organizador';
+import { OrganizadorService } from 'src/app/services/Organizador/organizador.service';
+import { Organizador } from 'src/app/services/Organizador/Organizador';
 
 @Component({
   selector: 'app-organizador',

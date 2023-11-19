@@ -11,7 +11,7 @@ import { AppComponent } from './app.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ModalModule } from 'ngx-bootstrap/modal';
 
-import { OrganizadorService } from './Organizador/organizador.service';
+import { OrganizadorService } from './services/Organizador/organizador.service';
 import { OrganizadorComponent } from './components/organizador/organizador.component';
 
 const routes: Routes = [{
