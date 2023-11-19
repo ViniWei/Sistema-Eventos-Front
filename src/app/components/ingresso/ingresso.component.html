@@ -1,16 +1,24 @@
-<form [formGroup]="formulario" (ngSubmit)="enviarFormulario()">
-    <label for="eventoId">Selecione um evento:</label>
-    <select formControlName="eventoId">
-      <option *ngFor="let evento of eventos" [value]="evento.id">{{ evento.nome }}</option>
-    </select>
-    <div class="container">
+<div class="container">
+    <h6>{{ tituloFormulario }}</h6>
+      <form [formGroup]="formulario" (ngSubmit)="enviarFormulario()">
+        <label for="eventoId">Selecione um evento:</label>
+        <select formControlName="eventoId">
+          <option *ngFor="let evento of eventos" [value]="evento.id">{{ evento.nome }}</option>
+        </select>
+  
+        <label for="preco">Preço:</label>
+        <input type="number" formControlName="preco" required>
+  
+        <label for="usuarioId">ID do Usuário:</label>
+        <input type="number" formControlName="usuarioId" required>
+  
         <div class="row">
-            <div>
-                <button type="submit" class="btn btn-sm btn-outline-secondary">Salvar</button>
-            </div>
-            <div class="pl-1">
-                <button type="button" class="btn btn-sm btn-light">Voltar</button>
-            </div>
+          <div>
+            <button (click)="listarUsuarios()" type="submit" class="btn btn-sm btn-outline-secondary">Salvar</button>
+          </div>
+          <div class="pl-1">
+            <button (click)="voltar()" type="button" class="btn btn-sm btn-light">Voltar</button>
+          </div>
         </div>
-    </div>
-</form>
+      </form>
+  </div>

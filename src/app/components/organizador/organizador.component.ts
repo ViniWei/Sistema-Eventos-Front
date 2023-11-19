@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { OrganizadorService } from 'src/app/services/Organizador/organizador.service';
 import { Organizador } from 'src/app/services/Organizador/Organizador';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-organizador',
@@ -12,7 +13,7 @@ import { Organizador } from 'src/app/services/Organizador/Organizador';
 export class OrganizadorComponent implements OnInit {
   formulario: any;
   tituloFormulario: string = 'Organizadores';
-  constructor(private organizadoresService: OrganizadorService) { }
+  constructor(private location: Location, private organizadoresService: OrganizadorService) { }
 
   ngOnInit(): void {
     this.tituloFormulario = 'Novo ';
@@ -27,5 +28,9 @@ export class OrganizadorComponent implements OnInit {
       alert('organizador inserido com sucesso.');
     }
     )
+  }
+
+  voltar(): void {
+    this.location.back();
   }
 }

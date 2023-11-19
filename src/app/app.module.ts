@@ -16,6 +16,7 @@ import { OrganizadorComponent } from './components/organizador/organizador.compo
 import { IngressoComponent } from './components/ingresso/ingresso.component';
 import { EventoComponent } from './components/evento/evento.component';
 import { UsuarioComponent } from './components/usuario/usuario.component';
+import { HomeComponent } from './Pages/home/home.component';
 
 const routes: Routes = [{
   path: 'organizadores', component:OrganizadorComponent
@@ -27,7 +28,8 @@ const routes: Routes = [{
     OrganizadorComponent,
     IngressoComponent,
     EventoComponent,
-    UsuarioComponent
+    UsuarioComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
