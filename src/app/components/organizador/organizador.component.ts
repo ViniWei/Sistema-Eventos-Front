@@ -16,7 +16,8 @@ export class OrganizadorComponent implements OnInit {
 
   ngOnInit(): void {
     this.tituloFormulario = 'Novo ';
-    this.formulario = new FormGroup({ id: new FormControl(null), nome: new FormControl(null), email: new FormControl(null), senha: new FormControl(null) }
+    this.formulario = new FormGroup({  
+      nome: new FormControl(null), email: new FormControl(null), senha: new FormControl(null) }
     )
   }
 
@@ -28,5 +29,3 @@ export class OrganizadorComponent implements OnInit {
     )
   }
 }
-
-
