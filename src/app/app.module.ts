@@ -13,6 +13,9 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 
 import { OrganizadorService } from './services/Organizador/organizador.service';
 import { OrganizadorComponent } from './components/organizador/organizador.component';
+import { IngressoComponent } from './components/ingresso/ingresso.component';
+import { EventoComponent } from './components/evento/evento.component';
+import { UsuarioComponent } from './components/usuario/usuario.component';
 
 const routes: Routes = [{
   path: 'organizadores', component:OrganizadorComponent
@@ -21,7 +24,10 @@ const routes: Routes = [{
 @NgModule({
   declarations: [
     AppComponent,
-    OrganizadorComponent
+    OrganizadorComponent,
+    IngressoComponent,
+    EventoComponent,
+    UsuarioComponent
   ],
   imports: [
     BrowserModule,
