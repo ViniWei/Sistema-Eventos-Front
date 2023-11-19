@@ -6,13 +6,19 @@ import { IngressoComponent } from './components/ingresso/ingresso.component';
 import { HomeComponent } from './Pages/home/home.component';
 import { EventoComponent } from './components/evento/evento.component';
 import { UsuarioComponent } from './components/usuario/usuario.component';
+import { ProdutosComponent } from './components/Produto/produtos/produtos.component';
+import { KitsComponent } from './components/kit/kits/kits.component';
+import { AtuantesComponent } from './components/atuante/atuantes/atuantes.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'organizadores', component: OrganizadorComponent }, 
   { path: 'eventos', component: EventoComponent }, 
+  { path: 'atuantes', component: AtuantesComponent},
   { path: 'ingressos', component: IngressoComponent },
   { path: 'usuarios', component: UsuarioComponent },
+  { path: 'produtos', component: ProdutosComponent},
+  { path: 'kits', component: KitsComponent}
 ];
 
 @NgModule({

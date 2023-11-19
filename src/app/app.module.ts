@@ -12,11 +12,19 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ModalModule } from 'ngx-bootstrap/modal';
 
 import { OrganizadorService } from './services/Organizador/organizador.service';
+import { KitsService } from './services/Kit/kits.service';
+import { AtuantesService } from './services/Atuante/atuantes.service';
+import { EventoService } from './services/Evento/evento.service';
+import { IngressoService } from './services/Ingresso/ingresso.service';
+import { ProdutoService } from './services/Produto/produto.service';
 import { OrganizadorComponent } from './components/organizador/organizador.component';
 import { IngressoComponent } from './components/ingresso/ingresso.component';
 import { EventoComponent } from './components/evento/evento.component';
 import { UsuarioComponent } from './components/usuario/usuario.component';
 import { HomeComponent } from './Pages/home/home.component';
+import { KitsComponent } from './components/kit/kits/kits.component';
+import { ProdutosComponent } from './components/Produto/produtos/produtos.component';
+import { AtuantesComponent } from './components/atuante/atuantes/atuantes.component';
 
 const routes: Routes = [{
   path: 'organizadores', component:OrganizadorComponent
@@ -29,7 +37,10 @@ const routes: Routes = [{
     IngressoComponent,
     EventoComponent,
     UsuarioComponent,
-    HomeComponent
+    HomeComponent,
+    KitsComponent,
+    ProdutosComponent,
+    AtuantesComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +50,7 @@ const routes: Routes = [{
     ReactiveFormsModule,
     ModalModule.forRoot()
   ],
-  providers: [HttpClientModule, OrganizadorService],
+  providers: [HttpClientModule, OrganizadorService, ProdutoService, KitsService, AtuantesService, EventoService, IngressoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
