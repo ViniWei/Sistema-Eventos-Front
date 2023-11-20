@@ -1,16 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { Routes } from '@angular/router';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
 import { ReactiveFormsModule } from '@angular/forms';
 import { ModalModule } from 'ngx-bootstrap/modal';
-
 import { OrganizadorService } from './services/Organizador/organizador.service';
 import { KitsService } from './services/Kit/kits.service';
 import { AtuantesService } from './services/Atuante/atuantes.service';
@@ -25,6 +21,7 @@ import { HomeComponent } from './Pages/home/home.component';
 import { KitsComponent } from './components/kit/kits/kits.component';
 import { ProdutosComponent } from './components/Produto/produtos/produtos.component';
 import { AtuantesComponent } from './components/atuante/atuantes/atuantes.component';
+import { PlanoComponent } from './components/plano/plano.component';
 
 const routes: Routes = [{
   path: 'organizadores', component:OrganizadorComponent
@@ -40,7 +37,8 @@ const routes: Routes = [{
     HomeComponent,
     KitsComponent,
     ProdutosComponent,
-    AtuantesComponent
+    AtuantesComponent,
+    PlanoComponent
   ],
   imports: [
     BrowserModule,
