@@ -11,7 +11,8 @@
       <input type="password" class="form-control" id="senhaInput" placeholder="Digite sua senha" #senhaInput>
     </div>
 
-    <button type="button" class="btn btn-primary" (click)="login(EmailInput.value, senhaInput.value)">Logar</button><br><br>
+    <button type="button" class="btn btn-primary" (click)="login(EmailInput.value, senhaInput.value)">Logar</button>
+    <button type="button" class="btn btn-primary" routerLink="usuarios">Cadastrar</button><br><br>
     <button type="button" class="btn btn-outline-secondary" routerLink="loginOrganizador">Logar como Organizador</button>
   </form>
 </div>
