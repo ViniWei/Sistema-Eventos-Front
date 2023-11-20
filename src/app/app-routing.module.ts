@@ -9,16 +9,20 @@ import { UsuarioComponent } from './components/usuario/usuario.component';
 import { ProdutosComponent } from './components/Produto/produtos/produtos.component';
 import { KitsComponent } from './components/kit/kits/kits.component';
 import { AtuantesComponent } from './components/atuante/atuantes/atuantes.component';
+import { LoginUsuarioComponent } from './Pages/home/login-usuario/login-usuario.component';
+import { HomeOrganizadorComponent } from './Pages/home/home-organizador/home-organizador.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', component: LoginUsuarioComponent },
+  { path: 'home', component: HomeComponent},
   { path: 'organizadores', component: OrganizadorComponent }, 
   { path: 'eventos', component: EventoComponent }, 
   { path: 'atuantes', component: AtuantesComponent},
   { path: 'ingressos', component: IngressoComponent },
   { path: 'usuarios', component: UsuarioComponent },
   { path: 'produtos', component: ProdutosComponent},
-  { path: 'kits', component: KitsComponent}
+  { path: 'kits', component: KitsComponent},
+  { path: 'homeOrganizador', component: HomeOrganizadorComponent}
 ];
 
 @NgModule({

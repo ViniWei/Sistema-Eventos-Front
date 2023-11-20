@@ -25,6 +25,8 @@ import { HomeComponent } from './Pages/home/home.component';
 import { KitsComponent } from './components/kit/kits/kits.component';
 import { ProdutosComponent } from './components/Produto/produtos/produtos.component';
 import { AtuantesComponent } from './components/atuante/atuantes/atuantes.component';
+import { LoginUsuarioComponent } from './Pages/home/login-usuario/login-usuario.component';
+import { HomeOrganizadorComponent } from './Pages/home/home-organizador/home-organizador.component';
 
 const routes: Routes = [{
   path: 'organizadores', component:OrganizadorComponent
@@ -40,7 +42,9 @@ const routes: Routes = [{
     HomeComponent,
     KitsComponent,
     ProdutosComponent,
-    AtuantesComponent
+    AtuantesComponent,
+    LoginUsuarioComponent,
+    HomeOrganizadorComponent
   ],
   imports: [
     BrowserModule,
