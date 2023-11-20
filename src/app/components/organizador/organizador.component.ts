@@ -16,7 +16,7 @@ export class OrganizadorComponent implements OnInit {
   constructor(private location: Location, private organizadoresService: OrganizadorService) { }
 
   ngOnInit(): void {
-    this.tituloFormulario = 'Novo ';
+    this.tituloFormulario = 'Cadastro Organizador';
     this.formulario = new FormGroup({  
       nome: new FormControl(null), email: new FormControl(null), senha: new FormControl(null) }
     )
