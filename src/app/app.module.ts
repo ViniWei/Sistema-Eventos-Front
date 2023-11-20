@@ -27,6 +27,7 @@ import { ProdutosComponent } from './components/Produto/produtos/produtos.compon
 import { AtuantesComponent } from './components/atuante/atuantes/atuantes.component';
 import { LoginUsuarioComponent } from './Pages/home/login-usuario/login-usuario.component';
 import { HomeOrganizadorComponent } from './Pages/home/home-organizador/home-organizador.component';
+import { LoginOrganizadorComponent } from './Pages/home/login-organizador/login-organizador.component';
 
 const routes: Routes = [{
   path: 'organizadores', component:OrganizadorComponent
@@ -44,7 +45,8 @@ const routes: Routes = [{
     ProdutosComponent,
     AtuantesComponent,
     LoginUsuarioComponent,
-    HomeOrganizadorComponent
+    HomeOrganizadorComponent,
+    LoginOrganizadorComponent
   ],
   imports: [
     BrowserModule,

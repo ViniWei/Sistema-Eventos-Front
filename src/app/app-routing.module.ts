@@ -11,9 +11,11 @@ import { KitsComponent } from './components/kit/kits/kits.component';
 import { AtuantesComponent } from './components/atuante/atuantes/atuantes.component';
 import { LoginUsuarioComponent } from './Pages/home/login-usuario/login-usuario.component';
 import { HomeOrganizadorComponent } from './Pages/home/home-organizador/home-organizador.component';
+import { LoginOrganizadorComponent } from './Pages/home/login-organizador/login-organizador.component';
 
 const routes: Routes = [
   { path: '', component: LoginUsuarioComponent },
+  { path: 'loginOrganizador', component: LoginOrganizadorComponent},
   { path: 'home', component: HomeComponent},
   { path: 'organizadores', component: OrganizadorComponent }, 
   { path: 'eventos', component: EventoComponent }, 
