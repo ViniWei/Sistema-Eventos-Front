@@ -15,9 +15,9 @@ export class LoginUsuarioComponent {
   constructor(private usuarioService: UsuarioService, private router: Router, private http: HttpClient){}
   apiUrl = 'http://localhost:5000/Usuario';
 
-  async login (usuario: string, senha: string){
+  async login (email: string, senha: string){
     const body = {
-      Usuario: usuario,
+      Email: email,
       Senha: senha
     }
 

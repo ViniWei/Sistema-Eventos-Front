@@ -1,8 +1,8 @@
 <div class="container mt-3">
   <form>
     <div class="form-group">
-      <label for="usuarioInput">Usuário:</label>
-      <input type="text" class="form-control" id="usuarioInput" placeholder="Digite seu usuário" #usuarioInput>
+      <label for="usuarioInput">Email:</label>
+      <input type="text" class="form-control" id="EmailInput" placeholder="Digite seu email" #EmailInput>
     </div>
 
     <div class="form-group">
@@ -10,6 +10,6 @@
       <input type="password" class="form-control" id="senhaInput" placeholder="Digite sua senha" #senhaInput>
     </div>
 
-    <button type="button" class="btn btn-primary" (click)="login(usuarioInput.value, senhaInput.value)">Logar</button>
+    <button type="button" class="btn btn-primary" (click)="login(EmailInput.value, senhaInput.value)">Logar</button>
   </form>
 </div>
