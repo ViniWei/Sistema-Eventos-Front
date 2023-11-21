@@ -32,10 +32,12 @@ export class ProdutoService {
     return this.http.put<Produto>(url, produto, httpOptions);
   }
 
-  excluir(id: number): Observable<any> {
+  excluir(id: number) {
     console.log(id);
-    const url = `${this.apiUrl}
-    /Excluir/${id}`;
-    return this.http.delete(url, httpOptions)
+    const url = `${this.apiUrl}/Excluir/${id}`;
+    this.http.delete(url, httpOptions).subscribe(
+      res => {return res},
+      error => {return error}
+    )
   } 
 }
