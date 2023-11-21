@@ -24,7 +24,7 @@ const routes: Routes = [
   { path: 'atuantes', component: AtuantesComponent},
   { path: 'ingressos', component: IngressoComponent },
   { path: 'usuarios', component: UsuarioComponent },
-  { path: 'produtos', component: ProdutosComponent},
+  { path: 'produtos', component: ProdutosComponent, },
   { path: 'kits', component: KitsComponent},
   { path: 'planos', component: PlanoComponent},
   { path: 'homeOrganizador', component: HomeOrganizadorComponent},

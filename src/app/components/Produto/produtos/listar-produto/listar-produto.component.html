@@ -4,7 +4,7 @@
         <li class="list-group-item" >
             {{produto.nome}} 
             <button class="btn btn-danger" (click)="deletarProduto(produto.id)">X</button>
-            <button class="btn btn-warning">🖊️</button>
+            <button class="btn btn-warning" routerLink="/produtos" [queryParams]="{ idProduto: produto.id}">🖊️</button>
         </li>
     </div>
     

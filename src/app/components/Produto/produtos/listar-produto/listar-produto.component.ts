@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ProdutoService } from 'src/app/services/Produto/produto.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-listar-produto',
@@ -11,15 +12,16 @@ import { ProdutoService } from 'src/app/services/Produto/produto.service';
 export class ListarProdutoComponent {
   constructor(private produtoService: ProdutoService) {}    
   produtos: any[] = [];
+  idProdutoAlterar : string | null = null;
 
   ngOnInit() {
+
     this.listaProduto();
   }
 
   listaProduto(){
     this.produtoService.listar().subscribe(
       (dados) => {
-        console.log(dados);
         this.produtos = dados;
       },
       (erro) => {
