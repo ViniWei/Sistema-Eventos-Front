@@ -20,11 +20,6 @@ export class OrganizadorService {
     return this.http.get<Organizador[]>(url);
   }
 
- // buscar(id: number): Observable<Organizador> {
-    //const url = `${this.apiUrl}/buscar/${id}`;
-    //return this.http.get<Organizador>(url);
-  //}
-
   cadastrar(organizador: Organizador): Observable<any> {
     const url = `${this.apiUrl}/Inserir`;
     return this.http.post<Organizador>(url, organizador, httpOptions);
@@ -36,8 +31,7 @@ export class OrganizadorService {
   }
 
   excluir(id: number): Observable<any> {
-    const url = `${this.apiUrl}
-    /Excluir/${id}`;
+    const url = `${this.apiUrl}/Excluir/${id}`;
     return this.http.delete<string>(url, httpOptions);
   } 
 }

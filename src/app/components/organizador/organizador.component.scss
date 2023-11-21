@@ -1,0 +1,78 @@
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  h1 {
+    font-weight: 700;
+    color: white;
+  }
+  
+  .background {
+    height: 100vh;
+    background-image: url("../../../assets/background.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+  }
+  
+  .container-modal {
+    display: flex;
+    gap: 50px;
+  }
+  
+  .container {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    box-sizing: border-box;
+    margin: 20px;
+  }
+  
+  .container-delete {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    height: 295.6px;
+    box-sizing: border-box;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btn-outline-secondary {
+    background-color: #f8f9fa;
+    color: #495057;
+    border: 1px solid #ccc;
+  }
+  
+  select,
+  input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .containerTitulo {
+    margin-bottom: 20px;
+  }
