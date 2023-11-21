@@ -15,6 +15,7 @@ import { LoginOrganizadorComponent } from './Pages/home/login-organizador/login-
 import { PlanoComponent } from './components/plano/plano.component';
 import { ListarProdutoComponent } from './components/Produto/produtos/listar-produto/listar-produto.component';
 import { AdministradorEventoComponent } from './components/evento/administrador-evento/administrador-evento.component';
+import { AdministradorKitsComponent } from './components/kit/kits/administrador-kits/administrador-kits.component';
 
 const routes: Routes = [
   { path: '', component: LoginUsuarioComponent },
@@ -30,7 +31,8 @@ const routes: Routes = [
   { path: 'planos', component: PlanoComponent},
   { path: 'homeOrganizador', component: HomeOrganizadorComponent},
   { path: 'administrarProdutos', component: ListarProdutoComponent},
-  { path: 'administrarEventos', component: AdministradorEventoComponent}
+  { path: 'administrarEventos', component: AdministradorEventoComponent},
+  { path: 'administrarKits', component: AdministradorKitsComponent}
 ];
 
 @NgModule({

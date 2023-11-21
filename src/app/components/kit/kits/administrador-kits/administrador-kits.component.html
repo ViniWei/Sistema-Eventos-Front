@@ -1,0 +1,13 @@
+
+<h2>kits</h2><button type="button" class="btn btn-secondary" routerLink="/kits">Insirir novo Kit</button>
+<ul class="list-group">
+    <div *ngFor="let kit of kits">
+        <li class="list-group-item" >
+            {{kit.nome}} 
+            <button class="btn btn-danger" (click)="deletarKit(kit.id)">X</button>
+            <button class="btn btn-warning" routerLink="/kits" [queryParams]="{ idKit: kit.id}">🖊️</button>
+        </li>
+    </div>
+    
+</ul>
+

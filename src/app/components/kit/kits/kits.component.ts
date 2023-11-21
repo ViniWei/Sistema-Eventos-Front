@@ -32,11 +32,14 @@ export class KitsComponent implements OnInit{
   enviarFormulario(): void {
     const kit: Kit = this.formulario.value;
 
-    console.log(kit);
     this.kitsService.cadastrar(kit).subscribe(result => {
       alert('Kit criado com sucesso.');
     }
     )
+  }
+  
+  voltar(): void {
+    this.location.back();
   }
 
 
