@@ -22,8 +22,11 @@ export class LoginOrganizadorComponent {
       body,
       { responseType: 'json' }).subscribe(res => 
         {
+          console.log(res);
           if (res.message == "Logado"){
             this.router.navigateByUrl('homeOrganizador');
+
+            localStorage.setItem("idOrganizador", res.usuario.id);
           }
         });
   }

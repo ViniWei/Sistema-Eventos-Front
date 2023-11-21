@@ -25,6 +25,7 @@ import { LoginUsuarioComponent } from './Pages/home/login-usuario/login-usuario.
 import { HomeOrganizadorComponent } from './Pages/home/home-organizador/home-organizador.component';
 import { LoginOrganizadorComponent } from './Pages/home/login-organizador/login-organizador.component';
 import { PlanoComponent } from './components/plano/plano.component';
+import { ListarProdutoComponent } from './components/Produto/produtos/listar-produto/listar-produto.component';
 import { CarouselModule } from 'primeng/carousel';
 import { ButtonModule } from 'primeng/button';
 
@@ -47,6 +48,8 @@ const routes: Routes = [{
     HomeOrganizadorComponent,
     LoginOrganizadorComponent,
     PlanoComponent,
+    ListarProdutoComponent
+
   ],
   imports: [
     CarouselModule,
