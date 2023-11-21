@@ -26,6 +26,8 @@ import { HomeOrganizadorComponent } from './Pages/home/home-organizador/home-org
 import { LoginOrganizadorComponent } from './Pages/home/login-organizador/login-organizador.component';
 import { PlanoComponent } from './components/plano/plano.component';
 import { ListarProdutoComponent } from './components/Produto/produtos/listar-produto/listar-produto.component';
+import { CarouselModule } from 'primeng/carousel';
+import { ButtonModule } from 'primeng/button';
 
 const routes: Routes = [{
   path: 'organizadores', component:OrganizadorComponent
@@ -47,8 +49,11 @@ const routes: Routes = [{
     LoginOrganizadorComponent,
     PlanoComponent,
     ListarProdutoComponent
+
   ],
   imports: [
+    CarouselModule,
+    ButtonModule,
     BrowserModule,
     AppRoutingModule,
     CommonModule,
