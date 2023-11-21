@@ -1,7 +1,61 @@
-<div class="home-container">
-    <h1>Bem-vindo à Página Inicial</h1>
-    
-    <div class="button-container">
-
+<div class="background">
+  
+  <div class="home-container">
+    <div style="margin-top: 50px;">
+      <h1>Eventos</h1>
     </div>
-  </div>
+    <div class="ingressos">
+      <p-carousel [value]="ingressos" [numVisible]="3" [numScroll]="1" [responsiveOptions]="responsiveOptions">
+        <ng-template let-ingressos pTemplate="item">
+            <div class="border-1 surface-border border-round m-2 text-center py-5 px-3">
+                <div>
+                    <h4 class="mb-1">{{ ingressos.nome }}</h4>
+                    <h6 class="mt-0 mb-3">{{ '$' + ingressos.preco }}</h6>
+                    <div class="car-buttons mt-5">
+                        <button class="btnComprar" type="button">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+    </p-carousel>
+    </div>
+
+    <div style="margin-top: 50px;">
+      <h1>Produtos</h1>
+    </div>
+    <div class="Produtos">
+      <p-carousel [value]="products" [numVisible]="3" [numScroll]="1" [responsiveOptions]="responsiveOptions">
+        <ng-template let-product pTemplate="item">
+            <div class="border-1 surface-border border-round m-2 text-center py-5 px-3">
+                <div>
+                    <h4 class="mb-1">{{ product.nome }}</h4>
+                    <h6 class="mt-0 mb-3">{{ '$' + product.preco }}</h6>
+                    <div class="car-buttons mt-5">
+                        <button class="btnComprar" type="button">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+    </p-carousel>
+    </div>
+
+    <div style="margin-top: 50px;">
+      <h1>Kits</h1>
+    </div>
+    <div class="Kits">
+      <p-carousel [value]="products" [numVisible]="3" [numScroll]="1" [responsiveOptions]="responsiveOptions">
+        <ng-template let-product pTemplate="item">
+            <div class="border-1 surface-border border-round m-2 text-center py-5 px-3">
+                <div>
+                    <h4 class="mb-1">{{ product.name }}</h4>
+                    <h6 class="mt-0 mb-3">{{ '$' + product.price }}</h6>
+                    <div class="car-buttons mt-5">
+                        <button class="btnComprar" type="button">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+    </p-carousel>
+    </div>
+</div>
+</div>

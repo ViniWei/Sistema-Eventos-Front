@@ -2,19 +2,26 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 100vh;
+  height: 100%;
+  opacity: 0.9;
+  color: white;
+  background-color: black;
+}
+
+.background{
+  height: 100%;
+  background-image: url("../../../assets/background.jpg");
 }
 
 .button-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Duas colunas com tamanhos iguais */
+  grid-template-columns: repeat(2, 1fr);
   gap: 10px;
   margin-top: 20px;
 }
 
 .btn {
-  width: 100%; /* Define a largura dos botões como 100% do espaço da coluna */
+  width: 100%;
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
@@ -28,12 +35,12 @@
 }
 
 .primary-btn {
-  background-color: #6a89cc; /* Azul suave */
+  background-color: #6a89cc; 
   color: #fff;
 }
 
 .secondary-btn {
-  background-color: #56ccf2; /* Azul mais claro */
+  background-color: #56ccf2; 
   color: #fff;
 }
 
@@ -45,4 +52,12 @@
 .quaternary-btn {
   background-color: #e3a6ae;
   color: #fff;
+}
+
+.btnComprar {
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  background-color: blue;
 }
