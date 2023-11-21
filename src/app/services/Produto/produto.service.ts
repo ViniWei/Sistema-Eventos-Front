@@ -28,13 +28,14 @@ export class ProdutoService {
   }
 
   alterar(produto: Produto): Observable<any> {
-    const url = `${this.apiUrl}/alterar`;
-    return this.http.put<Produto>(url, Produto, httpOptions);
+    const url = `${this.apiUrl}/Alterar`;
+    return this.http.put<Produto>(url, produto, httpOptions);
   }
 
   excluir(id: number): Observable<any> {
+    console.log(id);
     const url = `${this.apiUrl}
     /Excluir/${id}`;
-    return this.http.delete<string>(url, httpOptions)
+    return this.http.delete(url, httpOptions)
   } 
 }
