@@ -32,9 +32,12 @@ export class EventoService {
     return this.http.put<Evento>(url, evento, httpOptions);
   }
 
-  excluir(id: number): Observable<any> {
-    const url = `${this.apiUrl}
-    /Excluir/${id}`;
-    return this.http.delete<string>(url, httpOptions);
+  excluir(id: number) {
+    console.log(id);
+    const url = `${this.apiUrl}/Excluir/${id}`;
+    this.http.delete(url, httpOptions).subscribe(
+      res => {return res},
+      error => {return error}
+    )
   } 
 }

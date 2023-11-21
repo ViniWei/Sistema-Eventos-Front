@@ -32,5 +32,6 @@ export class ListarProdutoComponent {
  
   deletarProduto(id: number){
     this.produtoService.excluir(id);
+    this.listaProduto();
   }  
 }

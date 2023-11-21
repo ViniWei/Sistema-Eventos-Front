@@ -28,6 +28,7 @@ import { PlanoComponent } from './components/plano/plano.component';
 import { ListarProdutoComponent } from './components/Produto/produtos/listar-produto/listar-produto.component';
 import { CarouselModule } from 'primeng/carousel';
 import { ButtonModule } from 'primeng/button';
+import { AdministradorEventoComponent } from './components/evento/administrador-evento/administrador-evento.component';
 
 const routes: Routes = [{
   path: 'organizadores', component:OrganizadorComponent
@@ -48,7 +49,8 @@ const routes: Routes = [{
     HomeOrganizadorComponent,
     LoginOrganizadorComponent,
     PlanoComponent,
-    ListarProdutoComponent
+    ListarProdutoComponent,
+    AdministradorEventoComponent
 
   ],
   imports: [

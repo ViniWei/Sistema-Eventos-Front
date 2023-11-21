@@ -1,0 +1,11 @@
+<h2>Eventos</h2><button type="button" class="btn btn-secondary" routerLink="/eventos">Insirir novo Evento</button>
+<ul class="list-group">
+    <div *ngFor="let evento of eventos">
+        <li class="list-group-item" >
+            {{evento.nome}} 
+            <button class="btn btn-danger" (click)="deletarevento(evento.id)">X</button>
+            <button class="btn btn-warning" routerLink="/eventos" [queryParams]="{ idEvento: evento.id}">🖊️</button>
+        </li>
+    </div>
+    
+</ul>
