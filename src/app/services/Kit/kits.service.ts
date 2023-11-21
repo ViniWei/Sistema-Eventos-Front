@@ -29,12 +29,11 @@ export class KitsService {
 
   alterar(kit: Kit): Observable<any> {
     const url = `${this.apiUrl}/alterar`;
-    return this.http.put<Kit>(url, Kit, httpOptions);
+    return this.http.put<Kit>(url, kit, httpOptions);
   }
 
   excluir(id: number): Observable<any> {
-    const url = `${this.apiUrl}
-    /Excluir/${id}`;
+    const url = `${this.apiUrl}/Excluir/${id}`;
     return this.http.delete<string>(url, httpOptions);
   } 
 }

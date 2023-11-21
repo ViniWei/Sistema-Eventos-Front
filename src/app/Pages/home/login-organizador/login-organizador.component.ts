@@ -26,7 +26,7 @@ export class LoginOrganizadorComponent {
           if (res.message == "Logado"){
             this.router.navigateByUrl('homeOrganizador');
 
-            localStorage.setItem("idOrganizador", res.usuario.id);
+            localStorage.setItem("idOrganizador", res.organizadorId);
           }
         });
   }

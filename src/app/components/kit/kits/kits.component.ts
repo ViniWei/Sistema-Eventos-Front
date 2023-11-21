@@ -23,15 +23,16 @@ export class KitsComponent implements OnInit{
       nome: new FormControl(null, Validators.required),
       descricao: new FormControl(null, Validators.required),
       preco: new FormControl(null, Validators.required),
-      organizadorId: new FormControl(null, Validators.required),
-      organizador: new FormControl(null, Validators.required),
       produtos: new FormControl(null, Validators.required),
+      organizadorId: new FormControl(localStorage.getItem("idOrganizador"), Validators.required),
     }
     )
   }
 
   enviarFormulario(): void {
     const kit: Kit = this.formulario.value;
+
+    console.log(kit);
     this.kitsService.cadastrar(kit).subscribe(result => {
       alert('Kit criado com sucesso.');
     }
