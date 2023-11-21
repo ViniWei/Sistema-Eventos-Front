@@ -35,6 +35,6 @@ export class ProdutoService {
   excluir(id: number): Observable<any> {
     const url = `${this.apiUrl}
     /Excluir/${id}`;
-    return this.http.delete<string>(url, httpOptions);
+    return this.http.delete<string>(url, httpOptions)
   } 
 }

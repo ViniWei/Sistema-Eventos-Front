@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Location } from '@angular/common';
+import { PlanoService } from 'src/app/services/Plano/plano.service';
 
 @Component({
   selector: 'app-plano',
@@ -10,7 +11,7 @@ import { Location } from '@angular/common';
 export class PlanoComponent implements OnInit{
   formulario: any;
   tituloFormulario: string = 'Planos';
-  constructor(private location: Location, private planoService: PlanoComponent) { }
+  constructor(private location: Location, private planoService: PlanoService) { }
 
   ngOnInit(): void {
     this.tituloFormulario = 'Novo ';

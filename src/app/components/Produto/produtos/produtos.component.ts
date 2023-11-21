@@ -20,10 +20,8 @@ export class ProdutosComponent {
       nome: new FormControl('', Validators.required),
       descricao: new FormControl('', Validators.required),
       preco: new FormControl(0, [Validators.required, Validators.min(0)]),
-      organizadorId: new FormControl(0, Validators.required),
-      organizador: new FormControl(undefined),
-      kits: new FormControl([]),
-       }
+      organizadorId: new FormControl(localStorage.getItem("idOrganizador"), Validators.required),
+     }
     )
   }
 
