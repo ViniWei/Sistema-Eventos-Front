@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import { Organizador } from 'src/app/services/Organizador/Organizador';
-import { Plano } from 'src/app/services/Plano/Plano';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-plano',
@@ -10,7 +9,7 @@ import { Plano } from 'src/app/services/Plano/Plano';
 })
 export class PlanoComponent implements OnInit{
   formulario: any;
-  tituloFormulario: string = 'Organizadores';
+  tituloFormulario: string = 'Planos';
   constructor(private location: Location, private planoService: PlanoComponent) { }
 
   ngOnInit(): void {
