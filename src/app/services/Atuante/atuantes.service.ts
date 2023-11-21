@@ -2,7 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Ingresso } from '../Ingresso/Ingresso';
-import { Atuante } from './Atuante';
+import { Atuante } from "./Atuante";
 
 const httpOptions = {
   headers: new HttpHeaders({

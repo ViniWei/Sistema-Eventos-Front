@@ -28,6 +28,8 @@ import { PlanoComponent } from './components/plano/plano.component';
 import { ListarProdutoComponent } from './components/Produto/produtos/listar-produto/listar-produto.component';
 import { CarouselModule } from 'primeng/carousel';
 import { ButtonModule } from 'primeng/button';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const routes: Routes = [{
   path: 'organizadores', component:OrganizadorComponent
@@ -59,7 +61,9 @@ const routes: Routes = [{
     CommonModule,
     HttpClientModule,
     ReactiveFormsModule,
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    ToastrModule.forRoot(),
+    BrowserAnimationsModule,
   ],
   providers: [HttpClientModule, OrganizadorService, ProdutoService, KitsService, AtuantesService, EventoService, IngressoService],
   bootstrap: [AppComponent]

@@ -1,41 +1,61 @@
-<!-- Listar -->
-<div class="container">
-    <h6>Listar Atuantes</h6>
-    <button (click)="listar()" class="btn btn-sm btn-outline-secondary">Listar</button>
+<div class="background">
+  <div>
+    <h1>Atuante</h1>
   </div>
   
-  <!-- Cadastrar -->
+
+<div class="container-modal">
   <div class="container">
-    <h6>Cadastrar Atuante</h6>
-    <form [formGroup]="formulario" (ngSubmit)="enviarFormulario()">
-      <div class="form-group">
-        <label for="nomeCadastrar">Nome:</label>
-        <input type="text" id="nomeCadastrar" formControlName="nome" class="form-control" required>
-      </div>
-      <button type="submit" class="btn btn-sm btn-outline-secondary">Cadastrar</button>
-    </form>
-  </div>
-  
-  <!-- Alterar -->
-  <div class="container">
-    <h6>Alterar Atuante</h6>
+    <div class="containerTitulo">
+      <h6>Alterar Atuante</h6>
+    </div>
     <form [formGroup]="formularioAlterar" (ngSubmit)="alterar()">
       <div class="form-group">
+
+        <label for="id">Atuante</label>
+        <select formControlName="id">
+          <option *ngFor="let atuante of atuantes" [value]="atuante.id">{{ atuante.nome }}</option>
+        </select>
+
         <label for="nomeAlterar">Nome:</label>
         <input type="text" id="nomeAlterar" formControlName="nome" class="form-control" required>
       </div>
       <button type="submit" class="btn btn-sm btn-outline-secondary">Alterar</button>
     </form>
   </div>
-  
-  <!-- Excluir -->
-  <div class="container">
-    <h6>Excluir Atuante</h6>
-    <form [formGroup]="formularioExcluir" (ngSubmit)="excluir()">
+
+  <div  class="container">
+    <div class="containerTitulo">
+      <h6>Cadastrar Atuante</h6>
+    </div>
+    <form [formGroup]="formulario" (ngSubmit)="enviarFormulario()">
       <div class="form-group">
-        <label for="idExcluir">ID:</label>
-        <input type="number" id="idExcluir" formControlName="id" class="form-control" required>
+        <label for="eventoId">Evento pertencente</label>
+        <select formControlName="eventoId">
+          <option *ngFor="let evento of eventos" [value]="evento.id">{{ evento.nome }}</option>
+        </select>
+        <label for="nomeCadastrar">Nome:</label>
+        <input type="text" id="nomeCadastrar" formControlName="nome" class="form-control" required>
       </div>
-      <button type="submit" class="btn btn-sm btn-outline-secondary">Excluir</button>
+      <button type="submit" class="btn btn-sm btn-outline-secondary">Cadastrar</button>
     </form>
   </div>
+
+
+  <div class="container">
+    <div class="containerTitulo">
+      <h6>Excluir Atuante</h6>
+    </div>
+    <form [formGroup]="formularioExcluir" (ngSubmit)="excluir()">
+      <div class="form-group">
+        <label for="id">Atuante</label>
+        <select formControlName="id">
+          
+          <option *ngFor="let atuante of atuantes" [value]="atuante.id">{{ atuante.nome }}</option>
+        </select>
+      </div>
+      <button type="submit" (click)="listarEventos()" class="btn btn-sm btn-outline-secondary">Excluir</button>
+    </form>
+  </div>
+</div>
+</div>
