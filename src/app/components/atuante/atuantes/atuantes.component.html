@@ -1,1 +1,41 @@
-<p>atuantes works!</p>
+<!-- Listar -->
+<div class="container">
+    <h6>Listar Atuantes</h6>
+    <button (click)="listar()" class="btn btn-sm btn-outline-secondary">Listar</button>
+  </div>
+  
+  <!-- Cadastrar -->
+  <div class="container">
+    <h6>Cadastrar Atuante</h6>
+    <form [formGroup]="formulario" (ngSubmit)="enviarFormulario()">
+      <div class="form-group">
+        <label for="nomeCadastrar">Nome:</label>
+        <input type="text" id="nomeCadastrar" formControlName="nome" class="form-control" required>
+      </div>
+      <button type="submit" class="btn btn-sm btn-outline-secondary">Cadastrar</button>
+    </form>
+  </div>
+  
+  <!-- Alterar -->
+  <div class="container">
+    <h6>Alterar Atuante</h6>
+    <form [formGroup]="formularioAlterar" (ngSubmit)="alterar()">
+      <div class="form-group">
+        <label for="nomeAlterar">Nome:</label>
+        <input type="text" id="nomeAlterar" formControlName="nome" class="form-control" required>
+      </div>
+      <button type="submit" class="btn btn-sm btn-outline-secondary">Alterar</button>
+    </form>
+  </div>
+  
+  <!-- Excluir -->
+  <div class="container">
+    <h6>Excluir Atuante</h6>
+    <form [formGroup]="formularioExcluir" (ngSubmit)="excluir()">
+      <div class="form-group">
+        <label for="idExcluir">ID:</label>
+        <input type="number" id="idExcluir" formControlName="id" class="form-control" required>
+      </div>
+      <button type="submit" class="btn btn-sm btn-outline-secondary">Excluir</button>
+    </form>
+  </div>
